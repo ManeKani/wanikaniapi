@@ -116,6 +116,7 @@ type SubjectCommonData struct {
 	HiddenAt                 *time.Time                       `json:"hidden_at"`
 	Level                    int                              `json:"level"`
 	LessonPosition           int                              `json:"lesson_position"`
+	MeaningMnemonic          string                           `json:"meaning_mnemonic"`
 	Meanings                 []*SubjectMeaningObject          `json:"meanings"`
 	Slug                     string                           `json:"slug"`
 	SpacedRepetitionSystemID WKID                             `json:"spaced_repetition_system_id"`
