@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.1 -- 2023-12-14
+
+* Add `SubjectCommonData.MeaningMnemonic`
+
 ## v0.4.0 -- 2023-03-12
 
 * Add `AssignmentListParams.SubjectTypes`
