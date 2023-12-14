@@ -1,10 +1,10 @@
-# wanikaniapi [![Build Status](https://github.com/brandur/wanikaniapi/workflows/wanikaniapi%20CI/badge.svg)](https://github.com/brandur/wanikaniapi/actions) [![Go Reference](https://pkg.go.dev/badge/github.com/brandur/wanikaniapi.svg)](https://pkg.go.dev/github.com/brandur/wanikaniapi)
+# wanikaniapi [![Build Status](https://github.com/sixels/wanikaniapi/workflows/wanikaniapi%20CI/badge.svg)](https://github.com/sixels/wanikaniapi/actions) [![Go Reference](https://pkg.go.dev/badge/github.com/sixels/wanikaniapi.svg)](https://pkg.go.dev/github.com/sixels/wanikaniapi)
 
 A Go client for [WaniKani's API](https://docs.api.wanikani.com/).
 
 ## Usage
 
-See the [full API reference on Go.dev](https://pkg.go.dev/github.com/brandur/wanikaniapi).
+See the [full API reference on Go.dev](https://pkg.go.dev/github.com/sixels/wanikaniapi).
 
 Contents:
 
@@ -21,7 +21,7 @@ Contents:
 
 ### Client initialization
 
-All API requests are made through [`wanikaniapi.Client`](https://pkg.go.dev/github.com/brandur/wanikaniapi#Client). Make sure to include an API token:
+All API requests are made through [`wanikaniapi.Client`](https://pkg.go.dev/github.com/sixels/wanikaniapi#Client). Make sure to include an API token:
 
 ``` go
 package main
@@ -29,7 +29,7 @@ package main
 import (
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -51,7 +51,7 @@ package main
 import (
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -82,7 +82,7 @@ package main
 import (
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -104,11 +104,11 @@ func main() {
 
 The following helpers are available:
 
-* [`Bool`](https://pkg.go.dev/github.com/brandur/wanikaniapi#Bool)
-* [`ID`](https://pkg.go.dev/github.com/brandur/wanikaniapi#ID)
-* [`Int`](https://pkg.go.dev/github.com/brandur/wanikaniapi#Int)
-* [`String`](https://pkg.go.dev/github.com/brandur/wanikaniapi#String)
-* [`Time`](https://pkg.go.dev/github.com/brandur/wanikaniapi#Time)
+* [`Bool`](https://pkg.go.dev/github.com/sixels/wanikaniapi#Bool)
+* [`ID`](https://pkg.go.dev/github.com/sixels/wanikaniapi#ID)
+* [`Int`](https://pkg.go.dev/github.com/sixels/wanikaniapi#Int)
+* [`String`](https://pkg.go.dev/github.com/sixels/wanikaniapi#String)
+* [`Time`](https://pkg.go.dev/github.com/sixels/wanikaniapi#Time)
 
 No helpers are needed for setting slices like `IDs` because slices are `nil` by default.
 
@@ -137,7 +137,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -154,7 +154,7 @@ func main() {
 }
 ```
 
-Use the [`PageFully`](https://pkg.go.dev/github.com/brandur/wanikaniapi#Client.PageFully) helper to fully paginate an endpoint:
+Use the [`PageFully`](https://pkg.go.dev/github.com/sixels/wanikaniapi#Client.PageFully) helper to fully paginate an endpoint:
 
 ``` go
 package main
@@ -163,7 +163,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -203,7 +203,7 @@ Configure a logger by passing a `Logger` parameter while initializing a client:
 package main
 
 import (
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -215,7 +215,7 @@ func main() {
 }
 ```
 
-`Logger` expects a [`LeveledLoggerInterface`](https://pkg.go.dev/github.com/brandur/wanikaniapi#LeveledLoggerInterface):
+`Logger` expects a [`LeveledLoggerInterface`](https://pkg.go.dev/github.com/sixels/wanikaniapi#LeveledLoggerInterface):
 
 ``` go
 type LeveledLoggerInterface interface {
@@ -226,13 +226,13 @@ type LeveledLoggerInterface interface {
 }
 ```
 
-The package includes a basic logger called [`LeveledLogger`](https://pkg.go.dev/github.com/brandur/wanikaniapi#LeveledLogger) that implements it.
+The package includes a basic logger called [`LeveledLogger`](https://pkg.go.dev/github.com/sixels/wanikaniapi#LeveledLogger) that implements it.
 
 Some popular loggers like [Logrus](https://github.com/sirupsen/logrus/) and Zap's [SugaredLogger](https://godoc.org/go.uber.org/zap#SugaredLogger) also support this interface out-of-the-box so it's possible to set `DefaultLeveledLogger` to a `*logrus.Logger` or `*zap.SugaredLogger` directly. For others it may be necessary to write a shim layer to support them.
 
 ### Handling errors
 
-API errors are returned as the special error struct [`*APIError`](https://pkg.go.dev/github.com/brandur/wanikaniapi#APIError):
+API errors are returned as the special error struct [`*APIError`](https://pkg.go.dev/github.com/sixels/wanikaniapi#APIError):
 
 ``` go
 package main
@@ -241,7 +241,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -278,7 +278,7 @@ import (
 	"os"
     "time"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -310,7 +310,7 @@ import (
 	"context"
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -343,7 +343,7 @@ package main
 import (
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -377,7 +377,7 @@ package main
 import (
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {
@@ -413,7 +413,7 @@ package main
 import (
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {

@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 //

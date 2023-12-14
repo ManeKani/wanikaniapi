@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 func main() {

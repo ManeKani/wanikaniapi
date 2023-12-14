@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/brandur/wanikaniapi"
-	"github.com/brandur/wanikaniapi/wktesting"
+	"github.com/sixels/wanikaniapi"
+	"github.com/sixels/wanikaniapi/wktesting"
 	assert "github.com/stretchr/testify/require"
 )
 

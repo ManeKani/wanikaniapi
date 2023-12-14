@@ -1,4 +1,4 @@
-module github.com/brandur/wanikaniapi
+module github.com/sixels/wanikaniapi
 
 go 1.15
 

@@ -5,7 +5,7 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/brandur/wanikaniapi"
+	"github.com/sixels/wanikaniapi"
 )
 
 //////////////////////////////////////////////////////////////////////////////
