@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.2 -- 2023-12-17
+
+* Add support for `kana_vocabulary` subject type
+
 ## v0.4.1 -- 2023-12-14
 
 * Add `SubjectCommonData.MeaningMnemonic`

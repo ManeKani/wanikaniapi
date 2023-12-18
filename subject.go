@@ -61,6 +61,10 @@ type Subject struct {
 	// VocabularyData is data on a vocabulary subject. Populated only if he
 	// subject is a vocabulary.
 	VocabularyData *SubjectVocabularyData
+
+	// KanaVocabularyData is data on a kana vocabulary subject. Populated only if he
+	// subject is a kana_vocabulary.
+	KanaVocabularyData *SubjectKanaVocabularyData
 }
 
 // UnmarshalJSON is a custom JSON unmarshaling function for Subject.
@@ -100,6 +104,14 @@ func (s *Subject) UnmarshalJSON(data []byte) error {
 			s.VocabularyData = &SubjectVocabularyData{}
 			if err := json.Unmarshal(objMap["data"], s.VocabularyData); err != nil {
 				return fmt.Errorf("decoding vocabulary from subject: %w", err)
+			}
+		}
+
+	case ObjectTypeKanaVocabulary:
+		if _, ok := objMap["data"]; ok {
+			s.KanaVocabularyData = &SubjectKanaVocabularyData{}
+			if err := json.Unmarshal(objMap["data"], s.KanaVocabularyData); err != nil {
+				return fmt.Errorf("decoding kana_vocabulary from subject: %w", err)
 			}
 		}
 	}
@@ -202,6 +214,17 @@ type SubjectVocabularyData struct {
 	PartsOfSpeech        []string                                `json:"parts_of_speech"`
 	PronounciationAudios []*SubjectVocabularyPronounciationAudio `json:"pronounciation_audios"`
 	Readings             []*SubjectVocabularyReading             `json:"subject_vocabulary_reading"`
+}
+
+// SubjectKanaVocabularyData is data on a vocabulary subject.
+type SubjectKanaVocabularyData struct {
+	SubjectCommonData
+
+	Characters           string                                  `json:"characters"`
+	ContextSentences     []*SubjectVocabularyContextSentence     `json:"context_sentences"`
+	MeaningMnemonic      string                                  `json:"meaning_mnenomic"`
+	PartsOfSpeech        []string                                `json:"parts_of_speech"`
+	PronounciationAudios []*SubjectVocabularyPronounciationAudio `json:"pronounciation_audios"`
 }
 
 // SubjectVocabularyPronounciationAudio represets an audio object for

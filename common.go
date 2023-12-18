@@ -84,6 +84,7 @@ const (
 	ObjectTypeStudyMaterial          = WKObjectType("study_material")
 	ObjectTypeUser                   = WKObjectType("user")
 	ObjectTypeVocabulary             = WKObjectType("vocabulary")
+	ObjectTypeKanaVocabulary         = WKObjectType("kana_vocabulary")
 	ObjectTypeVoiceActor             = WKObjectType("voice_actor")
 )
 
