@@ -207,46 +207,46 @@ type SubjectVocabularyContextSentence struct {
 type SubjectVocabularyData struct {
 	SubjectCommonData
 
-	Characters           string                                  `json:"characters"`
-	ComponentSubjectIDs  []WKID                                  `json:"component_subject_ids"`
-	ContextSentences     []*SubjectVocabularyContextSentence     `json:"context_sentences"`
-	MeaningMnemonic      string                                  `json:"meaning_mnenomic"`
-	PartsOfSpeech        []string                                `json:"parts_of_speech"`
-	PronounciationAudios []*SubjectVocabularyPronounciationAudio `json:"pronounciation_audios"`
-	Readings             []*SubjectVocabularyReading             `json:"subject_vocabulary_reading"`
+	Characters          string                                 `json:"characters"`
+	ComponentSubjectIDs []WKID                                 `json:"component_subject_ids"`
+	ContextSentences    []*SubjectVocabularyContextSentence    `json:"context_sentences"`
+	MeaningMnemonic     string                                 `json:"meaning_mnenomic"`
+	PartsOfSpeech       []string                               `json:"parts_of_speech"`
+	PronunciationAudios []*SubjectVocabularyPronunciationAudio `json:"pronunciation_audios"`
+	Readings            []*SubjectVocabularyReading            `json:"subject_vocabulary_reading"`
 }
 
 // SubjectKanaVocabularyData is data on a vocabulary subject.
 type SubjectKanaVocabularyData struct {
 	SubjectCommonData
 
-	Characters           string                                  `json:"characters"`
-	ContextSentences     []*SubjectVocabularyContextSentence     `json:"context_sentences"`
-	MeaningMnemonic      string                                  `json:"meaning_mnenomic"`
-	PartsOfSpeech        []string                                `json:"parts_of_speech"`
-	PronounciationAudios []*SubjectVocabularyPronounciationAudio `json:"pronounciation_audios"`
+	Characters          string                                 `json:"characters"`
+	ContextSentences    []*SubjectVocabularyContextSentence    `json:"context_sentences"`
+	MeaningMnemonic     string                                 `json:"meaning_mnenomic"`
+	PartsOfSpeech       []string                               `json:"parts_of_speech"`
+	PronunciationAudios []*SubjectVocabularyPronunciationAudio `json:"pronunciation_audios"`
 }
 
-// SubjectVocabularyPronounciationAudio represets an audio object for
-// vocabulary pronounciation.
-type SubjectVocabularyPronounciationAudio struct {
-	ContentType string                                                          `json:"content_type"`
-	Metadata    map[SubjectVocabularyPronounciationAudioMetadataKey]interface{} `json:"metadata"`
-	URL         string                                                          `json:"url"`
+// SubjectVocabularyPronunciationAudio represets an audio object for
+// vocabulary pronunciation.
+type SubjectVocabularyPronunciationAudio struct {
+	ContentType string                                                         `json:"content_type"`
+	Metadata    map[SubjectVocabularyPronunciationAudioMetadataKey]interface{} `json:"metadata"`
+	URL         string                                                         `json:"url"`
 }
 
-// SubjectVocabularyPronounciationAudioMetadataKey is a key for pronounciation
+// SubjectVocabularyPronunciationAudioMetadataKey is a key for pronunciation
 // audio metadata.
-type SubjectVocabularyPronounciationAudioMetadataKey string
+type SubjectVocabularyPronunciationAudioMetadataKey string
 
-// All possible values of vocabulary pronounciation audio metadata keys.
+// All possible values of vocabulary pronunciation audio metadata keys.
 const (
-	SubjectVocabularyPronounciationAudioMetadataKeyGender           SubjectVocabularyPronounciationAudioMetadataKey = "gender"
-	SubjectVocabularyPronounciationAudioMetadataKeyPronounciation   SubjectVocabularyPronounciationAudioMetadataKey = "pronounciation"
-	SubjectVocabularyPronounciationAudioMetadataKeySourceID         SubjectVocabularyPronounciationAudioMetadataKey = "source_id"
-	SubjectVocabularyPronounciationAudioMetadataKeyVoiceActorID     SubjectVocabularyPronounciationAudioMetadataKey = "voice_actor_id"
-	SubjectVocabularyPronounciationAudioMetadataKeyVoiceActorName   SubjectVocabularyPronounciationAudioMetadataKey = "voice_actor_name"
-	SubjectVocabularyPronounciationAudioMetadataKeyVoiceDescription SubjectVocabularyPronounciationAudioMetadataKey = "voice_description"
+	SubjectVocabularyPronunciationAudioMetadataKeyGender           SubjectVocabularyPronunciationAudioMetadataKey = "gender"
+	SubjectVocabularyPronunciationAudioMetadataKeyPronunciation    SubjectVocabularyPronunciationAudioMetadataKey = "pronunciation"
+	SubjectVocabularyPronunciationAudioMetadataKeySourceID         SubjectVocabularyPronunciationAudioMetadataKey = "source_id"
+	SubjectVocabularyPronunciationAudioMetadataKeyVoiceActorID     SubjectVocabularyPronunciationAudioMetadataKey = "voice_actor_id"
+	SubjectVocabularyPronunciationAudioMetadataKeyVoiceActorName   SubjectVocabularyPronunciationAudioMetadataKey = "voice_actor_name"
+	SubjectVocabularyPronunciationAudioMetadataKeyVoiceDescription SubjectVocabularyPronunciationAudioMetadataKey = "voice_description"
 )
 
 // SubjectVocabularyReading is reading data on a vocabulary subject.
