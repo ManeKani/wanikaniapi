@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v0.4.4 -- 2023-12-19
+## v0.4.4 -- 2023-12-20
 
 * Add `SubjectVocabularyData.ReadingMnemonic`
 
