@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.3 -- 2023-12-19
+
+* Refactor pronunciation-related variable names fixing typos
+
 ## v0.4.2 -- 2023-12-17
 
 * Add support for `kana_vocabulary` subject type
