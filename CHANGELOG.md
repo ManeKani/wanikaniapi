@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.4.4 -- 2023-12-19
+
+* Add `SubjectVocabularyData.ReadingMnemonic`
+
 ## v0.4.3 -- 2023-12-19
 
 * Refactor pronunciation-related variable names fixing typos
