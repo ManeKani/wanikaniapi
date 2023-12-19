@@ -213,6 +213,7 @@ type SubjectVocabularyData struct {
 	MeaningMnemonic     string                                 `json:"meaning_mnenomic"`
 	PartsOfSpeech       []string                               `json:"parts_of_speech"`
 	PronunciationAudios []*SubjectVocabularyPronunciationAudio `json:"pronunciation_audios"`
+	ReadingMnemonic     string                                 `json:"reading_mnemonic"`
 	Readings            []*SubjectVocabularyReading            `json:"subject_vocabulary_reading"`
 }
 
